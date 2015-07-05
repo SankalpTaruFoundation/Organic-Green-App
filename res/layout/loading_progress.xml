@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPopup"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20.0dip" >
+
+    <ImageView
+        android:id="@+id/imgeView"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Loading..."
+        android:textColor="@color/dividerColor"
+        android:textSize="15sp" />
+
+</LinearLayout>

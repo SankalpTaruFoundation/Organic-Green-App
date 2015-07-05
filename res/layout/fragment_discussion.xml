@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" >
+
+        <AutoCompleteTextView
+            android:id="@+id/searchQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="5dip"
+            android:hint="SEARCH QUESTIONS" />
+
+        <RelativeLayout
+            android:id="@+id/queryLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#6021ccbb" >
+
+            <ImageView
+                android:id="@+id/openQueryDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dip"
+                android:background="@drawable/ic_status" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/openQueryDialog"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dip"
+                android:text="Ask Question"
+                android:textColor="#fff"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/grid_discussion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/queryLyt"
+            android:layout_below="@id/searchQuestions"
+            android:background="@color/list_background"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:focusableInTouchMode="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="true"
+            android:listSelector="@drawable/list_selector"
+            android:scrollbarThumbVertical="@drawable/scrollbar_handle"
+            android:scrollbarTrackVertical="@drawable/test" />
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

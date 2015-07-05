@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/goodList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/headerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="5dip"
+                android:text="How to Register?"
+                android:textColor="@color/dividerColor"
+                android:textIsSelectable="true"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/firstLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_below="@id/headerTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="@android:drawable/divider_horizontal_textfield" />
+
+            <TextView
+                android:id="@+id/mailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstLine"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="@string/registerDiscliamer"
+                android:textColor="@color/caldroid_black"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+           <!--  <EditText
+                android:id="@+id/textMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mailTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:hint="ENTER EMAIL"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/emailInstTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textMail"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:text="@string/email_instructions" />
+
+            <TextView
+                android:id="@+id/passwordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailInstTxt"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="Password"
+                android:textColor="@color/dividerColor"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:hint="ENTER PASSWORD"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <CheckBox
+                android:id="@+id/cbShowPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textPassword"
+                android:layout_below="@+id/textPassword"
+                android:text="Show Password"
+                android:textSize="14sp" /> -->
+
+            <!--
+ <TextView
+                android:id="@+id/addressView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textConfirmPassword"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="Address"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/cityView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressText"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="City"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cityText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/countryView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityText"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="Country"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/countryView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:prompt="@string/select_country" />
+
+            <TextView
+                android:id="@+id/postalView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/countrySpinner"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="Postal Code"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/postalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postalView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/phoneView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postalText"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="5dip"
+                android:text="Contact Number"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/phoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:inputType="number"/>
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbShowPwd"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/greenbutton"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/resetRegisterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbShowPwd"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"
+                android:layout_toRightOf="@id/registerButton"
+                android:background="@drawable/greenbutton"
+                android:text="Reset"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_below="@id/mailTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="6dip"
+                android:background="@android:drawable/divider_horizontal_textfield" /> -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

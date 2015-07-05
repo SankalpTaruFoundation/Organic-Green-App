@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/goodList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/headerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="12dip"
+                android:text="Organic Greens Login"
+                android:textColor="@color/dividerColor"
+                android:textIsSelectable="true"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/firstLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_below="@id/headerTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="@android:drawable/divider_horizontal_textfield" />
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstLine"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="20dip"
+                android:text="E-mail"
+                android:textColor="@color/dividerColor"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/passwordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textUsername"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="20dip"
+                android:text="Password"
+                android:textColor="@color/dividerColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordTextView"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <CheckBox
+                android:id="@+id/cbShowPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textPassword"
+                android:layout_below="@+id/textPassword"
+                android:textSize="14sp"
+                android:text="Show Password" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbShowPwd"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/greenbutton"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/resetLoginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbShowPwd"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/loginButton"
+                android:background="@drawable/greenbutton"
+                android:onClick="doResetLogin"
+                android:text="Reset"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_below="@id/resetLoginBtn"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@android:drawable/divider_horizontal_textfield" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

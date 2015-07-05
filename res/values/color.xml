@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_item_title">#000000</color>
+    <color name="list_background">#fff</color>
+    <color name="list_background_pressed">#ff40e0d0</color>
+    <color name="list_divider">#dcdcdc</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="dividerColor">#8cbf26</color>
+    <color name="StTheme">#3a8300</color>
+    <color name="text_turquoise_color">#ff40e0d0</color>
+
+</resources>

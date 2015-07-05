@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/loginPrmptLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/chooseActTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:text="Choose account to sign in"
+            android:textColor="@color/StTheme"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/stRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chooseActTxt"
+            android:layout_marginBottom="10dip"
+            android:checked="false"
+            android:text="I have SankalpTaru Organic Greens Account"
+            android:textColor="@color/StTheme"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/orImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stRadio"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/or" />
+
+        <Button
+            android:id="@+id/createActBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orImg"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/greenbutton"
+            android:text="CREATE AN ACCOUNT"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/resetPswdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/createActBtn"
+            android:background="@drawable/greenbutton"
+            android:text="FORGOT PASSWORD"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

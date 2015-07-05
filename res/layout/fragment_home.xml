@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" >
+
+        <RelativeLayout
+            android:id="@+id/homeParentLyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/postLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ListView
+                    android:id="@+id/profile_post_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/list_background"
+                    android:divider="@color/list_divider"
+                    android:dividerHeight="1dp"
+                    android:drawSelectorOnTop="false"
+                    android:focusableInTouchMode="false"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="true"
+                    android:listSelector="@drawable/list_selector"
+                    android:scrollbarThumbVertical="@drawable/scrollbar_handle"
+                    android:scrollbarTrackVertical="@drawable/test" />
+
+                <ProgressBar
+                    android:id="@+id/profileProgress"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/progress_image"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/noPoststxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textIsSelectable="true"
+                    android:text="No posts to Show, Post Status Now.!! (Click Status Update)"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/postRefreshLyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="5dip"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/refreshImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_refresh" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statusLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="10dip"
+            android:layout_alignParentBottom="true"
+            android:background="#6021ccbb" >
+
+            <ImageView
+                android:id="@+id/openStatusDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dip"
+                android:background="@drawable/ic_status" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@id/openStatusDialog"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dip"
+                android:text="Status Update"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

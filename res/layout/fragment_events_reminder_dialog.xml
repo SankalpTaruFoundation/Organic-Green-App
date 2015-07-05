@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundbox_white" >
+
+    <ScrollView
+        style="@style/goodList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:background="@color/dividerColor" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dip"
+                    android:text="SET IMPORTANT REMINDERS"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/eventNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_marginBottom="5dip"
+                android:hint="ACTIVITY NAME" />
+
+            <EditText
+                android:id="@+id/eventDescTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventNameTxt"
+                android:layout_marginBottom="5dip"
+                android:hint="ACTIVITY DESCRIPTION" />
+            
+            <!--  <EditText
+                android:id="@+id/locationTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventDescTxt"
+                android:layout_marginBottom="5dip"
+                android:hint="LOCATION" /> -->
+             
+
+            <TextView
+                android:id="@+id/fromTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventDescTxt"
+                android:text="FROM" />
+
+            <LinearLayout
+                android:id="@+id/fromPickerLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fromTxt"
+                android:layout_marginBottom="5dip"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <Spinner
+                    android:id="@+id/fromDateSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7" />
+
+                <Spinner
+                    android:id="@+id/fromTimeSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fromPickerLyt"
+                android:text="TO" />
+
+            <LinearLayout
+                android:id="@+id/toPickerLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toTxt"
+                android:layout_marginBottom="5dip"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <Spinner
+                    android:id="@+id/toDateSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7" />
+
+                <Spinner
+                    android:id="@+id/toTimeSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reminderTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toPickerLyt"
+                android:text="FREQUENCY" />
+
+            <Spinner
+                android:id="@+id/reminderSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reminderTxt"
+                android:layout_marginBottom="10dip" />
+
+            <Button
+                android:id="@+id/submitReminderBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reminderSpinner"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/greenbutton"
+                android:text="SUBMIT"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

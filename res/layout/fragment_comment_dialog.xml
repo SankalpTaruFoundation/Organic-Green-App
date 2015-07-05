@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundbox_white" >
+
+    <RelativeLayout
+        android:id="@+id/answerLayt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dip" >
+
+        <ImageView
+            android:id="@+id/addAnswerImg"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/open_gallery_btn" />
+
+        <View
+            android:id="@+id/verticalLine"
+            android:layout_width="1dip"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addAnswerImg"
+            android:background="#e1e1e1"
+            android:padding="2dip" />
+
+        <ImageView
+            android:id="@+id/addCamImg"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/verticalLine"
+            android:background="@drawable/open_camera_btn" />
+
+        <ImageView
+            android:id="@+id/postAnswerImg"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/send_post_btn" />
+
+        <EditText
+            android:id="@+id/answerBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_marginRight="3dip"
+            android:layout_toLeftOf="@id/postAnswerImg"
+            android:layout_toRightOf="@id/addCamImg"
+            android:hint="Post Your Answer" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/discussion_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/answerLayt"
+        android:background="@color/list_background"
+        android:divider="@color/list_divider"
+        android:dividerHeight="3dp"
+        android:listSelector="@drawable/list_selector"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle"
+        android:scrollbarTrackVertical="@drawable/test" />
+
+    <ProgressBar
+        android:id="@+id/loginprogress"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress_image_holo"
+        android:visibility="invisible" />
+
+</RelativeLayout>
